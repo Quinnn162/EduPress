@@ -11,6 +11,9 @@ function courses() {
 function feature_1() {
     window.location.href = " ./courses_content_1.html"
 }
+function homepage() {
+    window.location.href = "./homepage.html";
+}
 // Log In / Register
 function register() {
     event.defaultPrevented;
