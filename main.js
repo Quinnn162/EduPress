@@ -1,6 +1,6 @@
 // Dieu huong
 function homepage() {
-    window.location.href = "./homepage.html"
+    window.location.href = "./index.html"
 };
 function dieu_huong() {
     window.location.href = "./logIn.html"
