@@ -1,61 +1,46 @@
-// Dieu huong
-function homepage() {
-    window.location.href = "./index.html"
-};
-function dieu_huong() {
-    window.location.href = "./logIn.html"
-};
-
-
-function courses() {
-    window.location.href = "./courses.html"
-};
-function feature_1() {
-    window.location.href = " ./courses_content_overview_1.html"
-}
-
-function overview_1() {
-    window.location.href = "./courses_content_overview_1.html"
-}
-function overview() {
-    window.location.href = "./courses_content_overview_1.html"
-}
-function curriculum() {
-    window.location.href = "./course_content_curriculum_1.html"
-}
-function overview_2() {
-    window.location.href = "./courses_content_overview_2.html"
-}
-function overview_3() {
-    window.location.href = "./courses_content_overview_3.html"
-}
-function overview_4() {
-    window.location.href = "./courses_content_overview_4.html"
-}
-function overview_5() {
-    window.location.href = "./courses_content_overview_5.html"
-}
-function overview_6() {
-    window.location.href = "./courses_content_overview_6.html"
-}
-
-
 // Log In / Register
-function register() {
-    event.defaultPrevented;
-    let email = document.getElementsByClassName("email").value;
-    let username = document.getElementsByClassName("username").value;
-    let password = document.getElementsByClassName("password").value;
-    let confirmPassword = document.getElementsByClassName("confirmPassword").value;
-    let user = {
-        email: email,
+document.getElementById('registerForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const user = {
         username: username,
-        password: password,
-        confirmPassword: confirmPassword,
+        email: email,
+        password: password
+    };
+
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+    users.push(user);
+
+    localStorage.setItem('users', JSON.stringify(users));
+
+    alert('Registration successful!');
+});
+document.getElementById('logIn_form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const username = document.getElementById('logIn_username').value;
+    const password = document.getElementById('logIn_password').value;
+    const email = document.getElementById('logIn_username').value; 
+
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const user_email = users.find(user => user.password === password && user.email === email);
+    const user_username = users.find (user => user.username === username && user.password === password)
+    if (user_username) {
+        alert("Log in successful")
+        window.location.href = "./index.html"
+    } 
+    else if (user_email){
+        alert("Log in successful")
+        window.location.href = "./index.html"
     }
-        let json = JSON.stringify(user);
-        localStorage.setItem (user, json); 
-    alert("Dang ki thanh cong");
-}
+    else {
+        alert("Log in unsuccessful")
+    }
+})
+
+//Course 
+const list = document.querySelectorAll(video_content_list);
+
 
 
