@@ -40,7 +40,7 @@ document.getElementById('logIn_form').addEventListener('submit', function(e) {
 })
 
 //Course 
-const list = document.querySelectorAll(video_content_list);
+
 
 
 
