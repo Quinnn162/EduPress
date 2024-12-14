@@ -139,6 +139,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     .course_single_top_bg {
         width: 100%;
         height: 290px;
@@ -225,18 +226,19 @@
 
     .course_single_bottom {
         width: 1290px;
-        height: 480px;
+        height: 448px;
         padding-right: 440px;
         display: flex;
         justify-content: center;
         flex-direction: column;
+
         .ul_top {
             width: 100%;
             height: 64px;
             border-top-right-radius: 20px;
             border-top-left-radius: 20px;
             display: flex;
-            
+
             .li_top {
                 width: 170px;
                 height: 64px;
@@ -258,80 +260,49 @@
                 }
             }
         }
+
         .course_single_bottom_content {
-            width: 850px;
-            height: 630px;
+            width: 100%;
+            height: 477px;
             border-bottom-right-radius: 20px;
             border-bottom-left-radius: 20px;
             padding: 30px;
             gap: 20px;
             background-color: #F5F5F5;
-            .video_content {
-                width: 790px;
-                height: 56px;
+            .royal_list {
+                width: 730px;
+                height: 24px;
                 border-radius: 8px;
-                padding: 18px 20px;
-                gap: 8px;
-                background-color: white;
+                padding: 30px 30px;
+                gap: 10px;
+                background-color: #ffff;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 19.2px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                position: relative;
-                .video_content_left {
-                    width: 576px;
-                    height: 24px;
-                    size: 16px;
-                    font-weight: 600;
-                    line-height: 19.2px;
-                }
-                .video_content_right {
-                    width: 142px;
-                    height: 24px;
-                    gap: 10px;
-                    display: flex;
-                    justify-content: space-between;
-                    size: 16px;
-                    line-height: 24px;
-                    font-weight: 400;
-                    color: #555555;
-                }
                 #img_list {
-                    cursor: pointer;
-                }
-            }
-            #video_content_list {
-                width: 790px;
-                height: 168px;
-                border-bottom-left-radius: 8px;
-                border-bottom-right-radius: 8px;
-                background-color: white;
-                position: absolute;
-                display: none;
-                .show_list {
-                    width: 790px;
-                    height: 56px;
-                    padding-top: 12px;
-                    padding-left: 44px;
-                    padding-bottom: 12px;
-                    padding-right: 20px;
-                    gap: 8px;
+                    width: 24px;
+                    height: 24px;
                     display: flex;
-                    justify-content: space-between;
                     align-items: center;
-                   
-                    button {
-                        width: 76px;
-                        height: 32px;
-                        padding: 4px 12px;
-                        gap: 10px;
-                        background-color: #2580D5;
-                        border-radius: 8px;
-                        color: white;
-                        size: 16px;
-                        line-height: 24px;
-                    }
+                    cursor: pointer;
+                    
                 }
-
+                
+            }
+            #list_content {
+                width: 730px;
+                height: 100px;
+                font-size: 18px;
+                line-height: 27px;
+                padding-left: 30px;
+                padding-right: 30px;
+                font-weight: 400;
+                color: #555555;
+                background-color: #ffff;
+                display: none;
             }
         }
     }

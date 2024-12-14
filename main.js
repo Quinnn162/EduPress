@@ -39,8 +39,6 @@ document.getElementById('logIn_form').addEventListener('submit', function(e) {
     }
 })
 
-//Course 
-
 
 
 
